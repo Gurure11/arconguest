@@ -1,235 +1,219 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Chele Canvas & Tents </title>
-	<meta name="description" content="Chele Canvas & Tents ">
-	<meta name="keywords" content="tents, tanks,  Canvas, mobile tanks, ">
-	<style type="text/css">
-		*{
-			padding: 0;
-			margin: 0;
-			text-decoration: none;
-			list-style: none;
-			box-sizing: border-box;
-		}
-		nav{
-			background: green;
-			height: 80px;
-			width: 100%;
-		}
-		#main-head{
-			font-size: 35px;
-			color: white;
-			line-height: 80px;
-			background-size: cover;
-			display: block;
-			margin-bottom: 0px;
-			text-align: center;
-			margin-right: 20px;
-
-
-		}
-		nav ul{
-			float: right;
-			margin-right: 20px;
-
-		}
-		nav ul li{
-			display: inline-block;
-			line-height: 80px;
-			margin: 0 5px;
-			position: relative;
-
-		}
-		nav ul li a{
-			color: white;
-			font-size: 20px;
-			text-transform: uppercase;
-			padding: 7px 13px;
-			border-radius: 3px;
-			display: inline-block;
-					
-			}
-			a.active,a:hover{
-				color: white;
-				transition: 0.15s;
-				
-
-			}
-			.checkbtn{
-				font-size: 30px;
-				color: white;
-				float: right;
-				line-height: 80px;
-				margin-right: 40px;
-				cursor: pointer;
-				display: none;
-			}
-			#check{
-				display: none;
-			}
-			
-			nav ul li a:hover{
-				color: white;
-				display: inline-block;
-				background-color: green;
-				padding: 5px;
-				padding-top: 5px;
-				padding-bottom: 5px;
-				transition: 0.15s;
-				opacity: 0.5;
-			}
-			#body-main{
-				background-image: url(images/f.jpeg);
-				background-size: cover;
-			}
-			#tribe{
-				color: white;
-				margin-right: 10px;
-			}
-			#facebook{
-				width: 30px;
-				border-radius: 7px;
-				margin-right: 10px;
-				margin-left:20px;
-			}
-			#instagram{
-				width: 30px;
-				border-radius: 5px;
-			}
-			#tribe:hover{
-				color: blue;
-				background-color: white;
-				cursor: pointer;
-			}
-		
-		a:hover{
-			color: red;
-			background-color: green,
-			cursor: pointer;
-			opacity: 0.6;
-			transition: 0.17s;
-		}
-		#container{
-			width: 100%;
-			min-height: 100vh;
-			padding: 5%;
-			background-image: url(images/search);
-			background-position: center;
-			background-size: cover;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.slider-frame{
-		overflow: hidden;
-		width: 800px;
-		margin-left: 400px;
-		margin-top: 20px;
-		height: 700px;
-		margin-left: 360px;
-		margin-top: 20px;
-
-	}
-	#j{
-		width: 800px;
-		border-radius: 5px;
-	}
-	#k{
-		width: 800px;
-		border-radius: 5px;
-	}
-	#l{
-		width: 800px;
-		border-radius: 5px;
-	}
-
-	@-webkit-keyframes slide_animation{
-		0% {left:0px;}
-		10% {left:0px;}
-		20% {left:800px;}
-		30% {left:800px;}
-		40% {left:1600px;}
-		50% {left:1600px;}
-		60% {left:800px;}
-		70% {left:800px;}
-		80% {left:0px;}	
-		90% {left:0px;}
-		100% {left:0px;}
-		
-	}
-	.slide-images{
-		width: 800px;
-		margin: 0 0 0 -800px;
-		position: relative;
-		-webkit-animation-name: slide_animation;
-		-webkit-animation-duration: 20s;
-		-webkit-animation-iteration-count: infinite;
-		-webkit-animation-direction: alternate;
-		-webkit-animation-play-state: running;
-	}
-	.image-container{
-		width: 900px;
-		position: relative;
-		float: left;
-		height: 800px;
-	}
-	.fit-screen{
-		height: 100dvh;
-		
-	}	
-	</style>
-	<link rel="stylesheet" type="text/css" href="http://kit.fontawesome.com/a076d05399">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Blessings School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+        }
+        form {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        #b{
+            width: 200px;
+        }
+        #whatsapp{
+            width: 40px;
+            border-radius: 5px;
+        }
+        P{
+            text-align: center;
+            color: grey;
+            align-items: center;
+        }
+        h4{
+            color: white;
+            background-color: black;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+        }
+        #c{
+            width: 500px;
+            border-radius: 10px;
+        }
+        footer{
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+        #d{
+            width: 40px;
+            border-radius: 5px;
+            margin-left: 40px;
+        }
+        #d:hover{
+            opacity: 0.6;
+            transition: 0.19s;
+            cursor: pointer;
+        }
+        #safari:hover{
+            color: yellow;
+            background-color: red;
+            opacity: 0.6;
+            transition: 0.19s;
+            cursor: pointer;
+        }
+        #face{
+            width: 40px;
+            border-radius: 20px;
+        }
+        #map:hover{
+            cursor: pointer;
+            color: red;
+            transition: 0.7s;
+            opacity: 0.6;
+            
+        }
+        #map{
+            text-align: center;
+            font: bold;
+            margin-left: 100px;
+        }
+        
+    </style>
 </head>
+<body>
+    <header>
+        <h1>More Blessings School</h1><img id="b" src="images/d.jpeg">
+        <p>Your best education institute</p>
+    </header>
+    <div class="container">
+        <h2>Welcome to More Blessings School</h2> <a href="https://api.whatsapp.com/send?phone=%2B27616457335&data=ARArWsDNitpWZheDda1cy78LTY1BSsjPn6c5_YJ492M1sTHf3qNvD9NDIKQxi_jQQN-PvMdjncOxTtlHWB-y1_5s_Igx-9PST05H4AMjusDB4CCMF_-stHU1mlAIxp1cleMGK6mV5_FgCKuf0aYLcvM4Vw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR35dsDp1hRv3XR7CKfl_JQFM9sFJfqnGRnaL3AUPwHv1xIcT_6wOcCfSX0"><img id="whatsapp" src="images/whats.jpeg">Whatsapp<a/> <a href="https://web.facebook.com/"><img id="face" src="images/face.jpg"></a><br><br>
+            <br>
+        <div class="grid">
+            <div class="grid-item">
+               <img src="images/a.jpeg" alt="Image 1">
+            </div>
+            <div class="grid-item">
+                 <img src="images/j.jpeg" alt="Image 2">
+            </div>
+            <div class="grid-item">
+               <img src="images/h.jpeg" alt="Image 3">
+            </div>
+
+            <div class="grid-item">
+                 <img src="images/i.jpg" alt="Image 1">
+            </div>
+            <div class="grid-item">
+                <img src="images/c.jpg" alt="Image 2">
+            </div>
+            <div class="grid-item">
+                 <img src="images/b.jpeg" alt="Image 3">
+            </div>
+		
+            <!-- Add more images as needed -->
+        </div>
+        
+        <h3>APPLY ONLINE</h3>
+        <form action="https://formsubmit.co/bothwell.gurure@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="date_service" placeholder="YEAR OF ENROLLMENT" required>
+            <input type="text" name="Request_date" placeholder="Date of request" required>
+            <input type="text" name="student name" placeholder="Name of child"required>
+		<input type="date" name="age" placeholder="year of birth" required> 
+		<input type="submit" value="Apply now">
+        </form>
+    </div>
+    <hr>
+    <br>
+    <h4>About Us</h4><br>
+    <br>
+   <p> Welcome to More Blessing Private School, where excellence meets opportunity in the heart of Kempton Park, Gauteng. For over a decade, we've been dedicated to providing the best in curriculum-based education alongside a rich array of sporting and extracurricular activities. 
+
+At More Blessing, we believe in nurturing not only the academic talents of our students but also their holistic development. That's why we offer a comprehensive curriculum designed to inspire curiosity, critical thinking, and creativity in every child. Our experienced faculty members are committed to providing personalized attention to each student, ensuring that they reach their full potential academically and beyond.
+
+But education isn't just confined to the classroom at More Blessing. We understand the importance of fostering a well-rounded individual, which is why we offer a wide range of sporting and extracurricular activities. From athletics to arts and everything in between, there's something for everyone to explore and excel in.
+
+In addition to our academic and extracurricular offerings, More Blessing is proud to have produced quality students and graduates who have gone on to excel in their chosen fields. Our alumni network is a testament to the success of our educational philosophy and the dedication of our staff.
+
+At More Blessing, we believe that education should be accessible to all. That's why we welcome students from all backgrounds and walks of life, ensuring that everyone has the opportunity to thrive in our supportive learning environment.
+
+For those who require it, we also offer boarding facilities, providing a safe and comfortable home away from home for our students. And when it comes to dining, our exquisite diet ensures that every student receives nutritious and delicious meals to fuel their learning and growth.
+
+Join us at More Blessing Private School and discover a world of endless possibilities where every child is empowered to reach for the stars.
+
+
 
 <br>
-<body id="body-main">
-	<div class="fit-screen">
-	<h1 id="main-head">Chele Canvas & Tents </h1>
-	 <a href='https://www.free-counters.org/'>Get free Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=419dc3ed33202e6675ab7402ff9e9237f5443333'></script>
-<script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/1061858/t/2"></script>
-	<br>
-	<nav>
+<hr>
+<br>
 
-<a href="https://www.facebook.com/"><img id="facebook" src="images/facebook.jpg" target="_blank"></a>
-<a href=""><img id="instagram" src="images/instagram.jpg" target="_blank"></a>
-		
-	<br>
-	<ul>
-		<li><a class="active" href="index.html">Home</a></li>
-		<li><a href="details.html">About Us</a></li>
-		
-		<li><a href="contacts.html">Contacts</a></li>
-	</ul>
-	</nav>
-	<br>
-	<br>
+<br>
+            <br>
+            
+<br>
+<p>
+<div class="grid-item">
+                 <img src="images/f.jpg" alt="Image 1">
+            </div>
+            <div class="grid-item">
+                <img src="images/e.jpg" alt="Image 2">
+            </div>
+            <div class="grid-item">
+                 <img src="images/d.jpeg" alt="Image 3">
+            </div>
+<hr><br>
+    <br>
+    <a id="map" href="https://maps.app.goo.gl/3yiWZjZr2bSGTdgYA">Map</a><br>
+    <br>
+<footer>
+    <br>
+    
+    &copy More Blessing Private Schol  2024  Cell: 061 645 7335   Email: moreblessingschool@gmail.com<br>  Kempton Park<br>
+ <br>
+    <br>
+</footer>
+</p>
 
-	<div class="slider-frame">
-	<div class="slide-images">
-		
-			
-			<div class="img-container">
-				<img  src="images/h.jpeg">
-				
-			</div>
 
-			<div class="img-container">
-				<img  src="images/">
-				
-			</div>
-			
-	</div>
-</div>
-	
-</div>
-	<br>
-	<br><br>
-	<br>
-	<br> 
-	
-	<br>
-	<br>
+
 </body>
 </html>
