@@ -1,304 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="google-site-verification" content="9oO2OsQQ5chEwqJO_RCzhGaSE3o12L7_2J5mIH7628E" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="PrimeQueens Beauty">
-	<meta name="keywords" content="boarding school, school in kempton park, primary school, private school, Moreblessings Academy">	
-    <title>More Blessings Academy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .grid-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-        .grid-item img {
-            width: 100%;
-            height: auto;
-        }
-        form {
-            margin-top: 20px;
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
-        form input[type="text"],
-        form input[type="email"],
-        form input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        form input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        form input[type="submit"]:hover {
-            background-color: #555;
-        }
-        #b{
-            width: 200px;
-        }
-        #whatsapp{
-            width: 40px;
-            border-radius: 5px;
-        }
-        P{
-            text-align: center;
-            color: grey;
-            align-items: center;
-        }
-        h4{
-            color: orange;
-            
-            align-items: center;
-            text-align: center;
-            font-size: 30px;
-		
-        }
-        #c{
-            width: 300px;
-            border-radius: 10px;
-        }
-        footer{
-            color: white;
-            background-color: black;
-            text-align: center;
-        }
-        #d{
-            width: 40px;
-            border-radius: 5px;
-            margin-left: 40px;
-        }
-        #d:hover{
-            opacity: 0.6;
-            transition: 0.19s;
-            cursor: pointer;
-        }
-        #safari:hover{
-            color: yellow;
-            background-color: red;
-            opacity: 0.6;
-            transition: 0.19s;
-            cursor: pointer;
-        }
-        #face{
-            width: 40px;
-            border-radius: 20px;
-        }
-        #map:hover{
-            cursor: pointer;
-            color: red;
-            transition: 0.7s;
-            opacity: 0.6;
-            
-        }
-        #map{
-            text-align: center;
-            font: bold;
-            margin-left: 100px;
-        }
-	    body{
-		    text-align: center;
-		    align-items: center;
-	    }
-	    #cont{
-		    margin-left: 40px;
-	    }
-	    #app:hover{
-		    color: grey;
-		    background-color: blue;
-		    cursor: pointer;
-		    transition: 0.18s;
-		    opacity: 0.7;
-		    
-	    }
-	    
-		
-		
-		    
-	    
-        
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arcon Guest House offers beautiful overnight accommodation and restful day stays in Vanderbijlpark, near Vaal Institute. Comfortable and affordable lodging in the Vaal area." />
+  <meta name="keywords" content="Arcon Guest House, guest house Vanderbijlpark, Vaal Institute accommodation, affordable rooms, day rest, overnight stay, en-suite rooms, Vaal area lodging" />
+  <meta name="author" content="Arcon Guest House" />
+  <meta property="og:title" content="Arcon Guest House - Comfortable and Affordable Accommodation in Vaal" />
+  <meta property="og:description" content="Stay at Arcon Guest House in Vanderbijlpark for affordable overnight and day rest options. Located next to Vaal Institute." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.arconguesthouse.co.za" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x400?text=Room+1" />
+  <meta name="robots" content="index, follow" />
+  <title>Arcon Guest House</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #555;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #444;
+    }
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 16s infinite;
+    }
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { margin-left: 0%; }
+      25% { margin-left: 0%; }
+      30% { margin-left: -100%; }
+      50% { margin-left: -100%; }
+      55% { margin-left: -200%; }
+      75% { margin-left: -200%; }
+      80% { margin-left: -300%; }
+      100% { margin-left: -300%; }
+    }
+    .content {
+      padding: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>More Blessings Academy</h1><img id="b" src="images/dd.jpg">
-        <p>Your best education institute</p>
-    </header>
-    <div class="container">
-        <h2>Welcome to More Blessings Academy</h2> <a href="https://api.whatsapp.com/send?phone=%2B27616457335&data=ARArWsDNitpWZheDda1cy78LTY1BSsjPn6c5_YJ492M1sTHf3qNvD9NDIKQxi_jQQN-PvMdjncOxTtlHWB-y1_5s_Igx-9PST05H4AMjusDB4CCMF_-stHU1mlAIxp1cleMGK6mV5_FgCKuf0aYLcvM4Vw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR35dsDp1hRv3XR7CKfl_JQFM9sFJfqnGRnaL3AUPwHv1xIcT_6wOcCfSX0"><img id="whatsapp" src="images/whats.jpeg">Whatsapp<a/> <a href="https://web.facebook.com/"><img id="face" src="images/facebook.jpg"></a>  <a id="app" href="images/application.pdf">Application Form</a><br><br>
-            <br>
-        <div class="grid">
-            <div class="grid-item">
-               <img src="images/aa.jpg" alt="Image 1">
-            </div>
-            <div class="grid-item">
-                 <img src="images/jj.jpg" alt="Image 2">
-            </div>
-            <div class="grid-item">
-               <img src="images/hh.jpg" alt="Image 3">
-            </div>
+  <header>
+    <h1>Arcon Guest House</h1>
+    <p>Vanderbijlpark, next to Vaal Institute, Vaal Area</p>
+  </header>
 
-            <div class="grid-item">
-                 <img src="images/ee.jpg" alt="Image 1">
-            </div>
-            <div class="grid-item">
-                <img src="images/cc.jpg" alt="Image 2">
-            </div>
-            <div class="grid-item">
-                 <img src="images/bb.jpg" alt="Image 3">
-            </div>
-		
-            <!-- Add more images as needed -->
-        </div><br><br>
-		<hr>
-		<br>
-		<br>
-		 We are open for applications and intake from 0 months - grade R<br>
-		From grade 1 - Grade 9<br><br>
-        
-        <h3>APPLY ONLINE</h3>
-        <form action="https://formsubmit.co/bothwell.gurure@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="date_service" placeholder="YEAR OF ENROLLMENT" required>
-            <input type="text" name="Request_date" placeholder="Date of request" required>
-		<input type="text" name="Grade" placeholder="Grade" required>
-            <input type="text" name="student name" placeholder="Name of child"required>
-		<input type="date" name="age" placeholder="year of birth" required> 
-		<input type="submit" value="Apply now">
-        </form>
-    </div><br>
-    <hr>
-    <br>
-    <h4>****About Us****</h4><br>
-    <br>
-   <p> Welcome to More Blessings Academy, where excellence meets opportunity in the heart of Kempton Park, Gauteng. For over a decade, <br>
-        we've been dedicated to providing the best in curriculum-based education alongside a rich array of sporting and extracurricular activities.<br> 
-  <h4>OUR VISION</h4><br>
-    <br>
-	
-	<p>*******Our Vision Is To Be Identified As The Best Service Provider Of Development.*********</p>
-	<br>
-	<p>We are an organisation that promotes growth for our children.  Our target is to provide an environment that ensures growth for our childred
-	intellectually, socially and physcial ability. </p
-	<br>
-	
-	<br>
-	<br>
-	<h4>Mission</h4><br>
-	<br>
-	<br>
-	<p>*****Our Commitment To Accommodate A Positive And Happy Environment That Promotes Growth For The Young Ones.***** </p>
-	<br>
-	<p>We aim at achieving the best results in all respect.  This is mentally, socially, emotionally and physical.</p>
-	<br>
-	<br>
-<p>At More Blessing, we believe in nurturing not only the academic talents of our students but also their holistic development. That's why we offer a<br>
-comprehensive curriculum designed to inspire curiosity, critical thinking, and creativity in every child. Our experienced faculty members are committed <br>
-to providing personalized attention to each student, ensuring that they reach their full potential academically and beyond.<br>
-</p>
-<p>But education isn't just confined to the classroom at More Blessing. <br></p>
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-	   <br><br>
-	<p> <a href="images/kk.jpg"><img id="c" src="images/kk.jpg"></a><br><br> Our Lovely Teachers changing our lives<br>
-	   <br></p>
-	   <hr><br>
-<p>We understand the importance of fostering a well-rounded individual, which is why we offer a wide range of sporting and extracurricular activities.<br>
-From athletics to arts and everything in between, there's something for everyone to explore and excel in.<br></p>
+  <div class="slider">
+    <div class="slides">
+      <img src="https://via.placeholder.com/1200x400?text=Room+1" alt="Slide 1" />
+      <img src="https://via.placeholder.com/1200x400?text=Room+2" alt="Slide 2" />
+      <img src="https://via.placeholder.com/1200x400?text=Room+3" alt="Slide 3" />
+      <img src="https://via.placeholder.com/1200x400?text=Room+4" alt="Slide 4" />
+    </div>
+  </div>
 
-<p>In addition to our academic and extracurricular offerings, More Blessing is proud to have produced quality students and graduates who have gone on to excel in<br>
-		their chosen fields. Our alumni network is a testament to the success of our educational philosophy and the dedication of our staff.<br>
+  <section id="about" class="content">
+    <h2>About Us</h2>
+    <p>
+      Welcome to Arcon Guest House, situated in Vanderbijlpark next to Vaal Institute,
+      in the heart and comfort of the Vaal area. We offer beautiful overnight accommodation
+      and restful day stays for all our guests. Enjoy peace, comfort, and affordable rates.
+    </p>
+  </section>
 
-At More Blessing, we believe that education should be accessible to all. <br></p>
-<p>That's why we welcome students from all backgrounds and walks of life, ensuring that everyone has the opportunity to thrive in our supportive learning<br>
-environment.<br><br></p>
-	<p>  <a href="images/hello.jpg"><img id="c" src="images/hello.jpg"></a><br><br></p>
+  <section id="rooms" class="content">
+    <h2>Room Options & Pricing</h2>
+    <ul>
+      <li>Double Room (shared bathroom) - R300</li>
+      <li>Single Room with Double Bed - R300</li>
+      <li>Double Room with En-suite - R400</li>
+      <li>Day Rest (3 hours) - From R150</li>
+    </ul>
+  </section>
 
-<p>>For those who require it, we also offer boarding facilities, providing a safe and comfortable home away from home for our students. And when it comes to dining,<br>
-our exquisite diet ensures that every student receives nutritious and delicious meals to fuel their learning and growth.<br><br>
-	   <a href="images/hallo.jpg"> <img id="c" src="images/hallo.jpg"></a><br><br></p>
+  <section id="gallery">
+    <h2 style="text-align:center; padding-top: 1rem;">Gallery</h2>
+    <div class="grid">
+      <img src="https://via.placeholder.com/300x200?text=Room+A" alt="Room A">
+      <img src="https://via.placeholder.com/300x200?text=Room+B" alt="Room B">
+      <img src="https://via.placeholder.com/300x200?text=Room+C" alt="Room C">
+      <img src="https://via.placeholder.com/300x200?text=Room+D" alt="Room D">
+    </div>
+  </section>
 
-Join us at More Blessing Private School and discover a world of endless possibilities where every child is empowered to reach for the stars.<br>
+  <section id="contact" class="content">
+    <h2>Contact Us</h2>
+    <p>Address: Arcon Guest House, Vanderbijlpark, next to Vaal Institute</p>
+    <p>Phone: 012 345 6789</p>
+    <p>Email: info@arconguesthouse.co.za</p>
+  </section>
 
-
-
-<br>
-<hr>
-<br>
-
-<br>
-            <br>
-            
-<br>
-<p>
-<body >
-	<h4>****Computer lab****</h4><br><br>
-	<img id="c" src="images/ff.jpg"><br><br>
-	Our computer lab, our kids become computer literate at a very early age.
-	<br><br>
-	<img id="c" src="images/ee.jpg"><br><br>
-	Our Principal alongside a student graduate.
-	<br><br>
-	 <img id="c" src="images/gg.jpg"><br><br>
-	We participate in all field activities, from chess, sports and debate to name a few.<br>
-	
-             
-            </div>
-	NB: At More Blessings Academy we offer nursery education, arts, sciences, matric and matric re write as well.<br>
-	<ul>
-		<li>Night school</li>
-		<li>Extra Lessons</li>
-		<li>Boarding facilities</li>
-		<li>Home work assistance</li>
-		<li>Aftercare</li>
-		<li>Weekend care</li>
-	</ul>
-<hr><br>
-    <br>
-    <a id="map" href="https://maps.app.goo.gl/PqN4uVZzAJzriFVL9">Map</a><br><br>
-	<h4>Our Boarding Facilities</h4><br><br>
-	<a href="images/bed.jpg"><img id="c" src="images/bed.jpg"></a><br><br>
-	<a href="images/beds.jpg"><img id="c" src="images/beds.jpg"></a><br><br>
-        <a href="images/dorm.jpg"><img id="c" src="images/dorm.jpg"></a><br><br>
-	<a href="images/dorms.jpg"><img id="c" src="images/dorms.jpg"></a><br><br>
-	Our kids are at home away from home. We have the best dormitory facilities for our children.<br>
-
-</body>
-    <br>
-<footer>
-    <br>
-    
-    &copy More Blessing Private School  2024  Cell: 061 645 7335/ 068 255 0905   Email: moreblessingsacademy@gmail.com<br> 18 Thristle Road, Kempton Park, Johannesburg<br>
- <br>
-    <br>
-</footer>
-</p>
-
-
-
+  <footer>
+    &copy; 2025 Arcon Guest House. All rights reserved.
+  </footer>
 </body>
 </html>
