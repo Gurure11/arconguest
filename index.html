@@ -16,29 +16,38 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff8e7, #e0f7fa);
       color: #333;
     }
     header {
-      background-color: #333;
+      background-color: #004d40;
       color: white;
       padding: 1rem;
       text-align: center;
     }
+    header h1 {
+      animation: floatIn 2s ease-out;
+    }
+    @keyframes floatIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
     nav {
       display: flex;
       justify-content: center;
-      background: #555;
+      background: #00796b;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       text-decoration: none;
       padding: 1rem;
       display: inline-block;
+      transition: background 0.3s ease;
     }
     nav a:hover {
-      background: #444;
+      background: #004d40;
     }
     .slider {
       position: relative;
@@ -80,17 +89,72 @@
       border-radius: 10px;
       height: 200px;
       object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffffdd;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease-in;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.7rem 1.5rem;
+      background: #00796b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #004d40;
+    }
+    .social-links {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00796b;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: #004d40;
     }
     footer {
-      background: #333;
+      background-color: #004d40;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      height: 60px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <header>
+    <img class="logo" src="https://via.placeholder.com/150x60?text=LOGO" alt="Arcon Guest House Logo">
     <h1>Arcon Guest House</h1>
     <p>Vanderbijlpark, next to Vaal Institute, Vaal Area</p>
   </header>
@@ -100,55 +164,49 @@
     <a href="#rooms">Rooms</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
+    <a href="#contact">Book Now</a>
   </nav>
 
   <div class="slider">
     <div class="slides">
-      <img src="images/ima.jpg" alt="Slide 1" />
-      <img src="images/imo.jpg" alt="Slide 2" />
-      <img src="https://via.placeholder.com/1200x400?text=Room+3" alt="Slide 3" />
-      <img src="https://via.placeholder.com/1200x400?text=Room+4" alt="Slide 4" />
+      <img src="images/ima.jpg" alt="Room 1">
+      <img src="images/imo.jpg" alt="Room 2">
+      <img src="images/imu.jpg" alt="Room 3">
+      <img src="images/imi.jpg" alt="Room 4">
     </div>
   </div>
 
   <section id="about" class="content">
     <h2>About Us</h2>
-    <p>
-      Welcome to Arcon Guest House, situated in Vanderbijlpark next to Vaal Institute,
-      in the heart and comfort of the Vaal area. We offer beautiful overnight accommodation
-      and restful day stays for all our guests. Enjoy peace, comfort, and affordable rates.
-    </p>
+    <p>Arcon Guest House is located in Vanderbijlpark, next to the Vaal Institute in the heart of the Vaal area. We offer beautiful and affordable overnight accommodation and restful day stays for travelers, professionals, and families.</p>
+    <p>Our rooms range from Double Rooms with shared bathrooms to En-suite Double Rooms, as well as Single Rooms with double beds. Day rest options are also available starting from just R150 for 3 hours.</p>
+    <p>We are a <strong>self-catering guest house</strong> with everything you need for a comfortable stay. Enjoy our <strong>beautifully equipped kitchen</strong> with modern appliances, perfect for preparing your own meals at your convenience.</p>
   </section>
 
-  <section id="rooms" class="content">
-    <h2>Room Options & Pricing</h2>
-    <ul>
-      <li>Double Room (shared bathroom) - R300</li>
-      <li>Single Room with Double Bed - R300</li>
-      <li>Double Room with En-suite - R400</li>
-      <li>Day Rest (3 hours) - From R150</li>
-    </ul>
-  </section>
-
-  <section id="gallery">
-    <h2 style="text-align:center; padding-top: 1rem;">Gallery</h2>
-    <div class="grid">
-      <a><img src="images/ima.jpg" alt="Room A"></a>
-      <a><img src="images/imo.jpg" alt="Room B"></a>
-      <img src="https://via.placeholder.com/300x200?text=Room+C" alt="Room C">
-      <img src="https://via.placeholder.com/300x200?text=Room+D" alt="Room D">
-    </div>
+  <section id="gallery" class="grid">
+    <img src="images/imae.jpg" alt="Room A">
+    <img src="images/imo.jpg" alt="Room B">
+    <img src="images/ima.jpg" alt="Room C">
+    <img src="images/ime.jpg" alt="Kitchen">
   </section>
 
   <section id="contact" class="content">
     <h2>Contact Us</h2>
-    <p>Address: Arcon Guest House, Vanderbijlpark, next to Vaal Institute</p>
-    <p>Phone: 012 345 6789</p>
-    <p>Email: info@arconguesthouse.co.za</p>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Arcon Guest House. All rights reserved.
+    <p>&copy; 2025 Arcon Guest House. All rights reserved.</p>
   </footer>
 </body>
 </html>
