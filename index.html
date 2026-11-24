@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6335813637851040"
-     crossorigin="anonymous"></script>
-  
-  <meta name="google-site-verification" content="osMnd1pelFG9R-fSxdpcFbVuMg7GUIhUkNDeCZ-47k4" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Arcon Guest House offers beautiful overnight accommodation and restful day stays in Vanderbijlpark, near Vaal Institute. Comfortable and affordable lodging in the Vaal area." />
@@ -14,238 +10,700 @@
   <meta property="og:description" content="Stay at Arcon Guest House in Vanderbijlpark for affordable overnight and day rest options. Located next to Vaal Institute." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.arconguesthouse.co.za" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x400?text=Room+1" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x400?text=Arcon+Guest+House" />
   <meta name="robots" content="index, follow" />
-  <title>Arcon Guest House</title>
+  <title>Arcon Guest House · Modern Stays</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #fff8e7, #e0f7fa);
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f7f4;
+      color: #1e2b2c;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* modern gradient & glass */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -10px rgba(0, 60, 50, 0.15);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    /* animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes softPulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 121, 107, 0.2); }
+      70% { box-shadow: 0 0 0 15px rgba(0, 121, 107, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 121, 107, 0); }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-fade-up {
+      animation: fadeUp 1s ease forwards;
+    }
+
+    /* header */
     header {
-      background-color: #004d40;
+      background: linear-gradient(135deg, #004d40 0%, #00695c 100%);
       color: white;
-      padding: 1rem;
-      text-align: center;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+      box-shadow: 0 15px 30px -10px rgba(0,77,64,0.3);
     }
-    header h1 {
-      animation: floatIn 2s ease-out;
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
-    @keyframes floatIn {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+
+    .logo-area img {
+      height: 60px;
+      width: auto;
+      border-radius: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: transform 0.3s;
     }
+
+    .logo-area img:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    .logo-area h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(to right, #ffffff, #d4f3e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header-info {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      backdrop-filter: blur(5px);
+    }
+
+    .header-info i {
+      margin-right: 6px;
+      color: #b2dfdb;
+    }
+
+    /* Navigation – modern pill */
     nav {
       display: flex;
       justify-content: center;
-      background: #00796b;
       flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1.8rem auto 0.5rem;
+      padding: 0 1.5rem;
+      max-width: 1000px;
     }
+
     nav a {
-      color: white;
+      background: white;
+      color: #004d40;
+      font-weight: 600;
+      padding: 0.7rem 1.6rem;
+      border-radius: 60px;
       text-decoration: none;
-      padding: 1rem;
-      display: inline-block;
-      transition: background 0.3s ease;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      border: 1px solid #e0e0e0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
+
+    nav a i {
+      font-size: 1rem;
+      color: #00796b;
+      transition: transform 0.2s;
+    }
+
     nav a:hover {
-      background: #004d40;
+      background: #00796b;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px -8px #00796b80;
+      border-color: #00796b;
     }
+
+    nav a:hover i {
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* slider - modern */
     .slider {
       position: relative;
-      max-width: 100%;
-      height: 400px;
+      max-width: 1200px;
+      margin: 2rem auto;
+      border-radius: 2.5rem;
       overflow: hidden;
+      box-shadow: 0 30px 45px -20px rgba(0,0,0,0.3);
+      height: 420px;
     }
+
     .slides {
       display: flex;
       width: 400%;
-      animation: slide 16s infinite;
+      height: 100%;
+      animation: slide 20s infinite;
     }
+
     .slides img {
-      width: 100%;
-      height: 400px;
+      width: 25%;
+      height: 100%;
       object-fit: cover;
+      transition: transform 0.5s;
     }
+
+    .slider:hover .slides img {
+      transform: scale(1.02);
+    }
+
     @keyframes slide {
-      0% { margin-left: 0%; }
-      25% { margin-left: 0%; }
-      30% { margin-left: -100%; }
-      50% { margin-left: -100%; }
-      55% { margin-left: -200%; }
-      75% { margin-left: -200%; }
-      80% { margin-left: -300%; }
+      0%, 20% { margin-left: 0%; }
+      25%, 45% { margin-left: -100%; }
+      50%, 70% { margin-left: -200%; }
+      75%, 95% { margin-left: -300%; }
       100% { margin-left: -300%; }
     }
-    .content {
-      padding: 2rem;
+
+    /* section styling */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
-    .grid {
+
+    .section-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1.5rem;
+      color: #00332c;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .section-title i {
+      font-size: 2rem;
+      color: #00796b;
+      background: #e0f2f1;
+      padding: 12px;
+      border-radius: 50%;
+      animation: float 5s infinite;
+    }
+
+    .about-text {
+      background: white;
+      border-radius: 2rem;
+      padding: 2.5rem;
+      box-shadow: 0 25px 40px -20px rgba(0,60,50,0.2);
+      border: 1px solid #edf7f5;
+      animation: fadeUp 0.8s ease;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      color: #2e4a47;
+    }
+
+    /* grid for gallery preview */
+    .preview-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
     }
-    .grid img {
+
+    .preview-grid a {
+      display: block;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 15px 25px -10px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .preview-grid a::after {
+      content: "↗";
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: white;
+      color: #004d40;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-grid a:hover::after {
+      opacity: 1;
+    }
+
+    .preview-grid a:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 30px 35px -15px #00796b60;
+    }
+
+    .preview-grid img {
       width: 100%;
-      border-radius: 10px;
-      height: 200px;
+      height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      transition: transform 0.5s;
     }
-    .grid img:hover {
-      transform: scale(1.05);
+
+    .preview-grid a:hover img {
+      transform: scale(1.08);
     }
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: #ffffffdd;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      animation: fadeIn 1.5s ease-in;
+
+    /* form */
+    .contact-form {
+      background: white;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem 2.2rem;
+      border-radius: 2.5rem;
+      box-shadow: 0 30px 45px -20px rgba(0,77,64,0.3);
+      animation: slideInLeft 0.8s ease;
     }
-    form input, form textarea {
+
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 1rem 1.2rem;
+      margin: 0.7rem 0;
+      border: 2px solid #e0e0e0;
+      border-radius: 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      background: #fafafa;
     }
-    form button {
-      padding: 0.7rem 1.5rem;
+
+    .contact-form textarea {
+      border-radius: 24px;
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #00796b;
+      outline: none;
+      background: white;
+      box-shadow: 0 0 0 4px rgba(0,121,107,0.1);
+    }
+
+    .contact-form button {
       background: #00796b;
       color: white;
       border: none;
-      border-radius: 4px;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px -8px #00796b;
     }
-    form button:hover {
+
+    .contact-form button:hover {
       background: #004d40;
+      transform: scale(1.02) translateY(-2px);
+      box-shadow: 0 18px 30px -10px #004d40;
     }
+
+    /* social */
     .social-links {
-      text-align: center;
-      margin-top: 1rem;
-      width: 35px;
-    }
-    .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #00796b;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-    .social-links a:hover {
-      color: #004d40;
-    }
-    footer {
-      background-color: #004d40;
-      color: white;
-      text-align: center;
-      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
       margin-top: 2rem;
+      flex-wrap: wrap;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .logo {
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
       height: 60px;
-      margin-bottom: 10px;
+      background: white;
+      border-radius: 50%;
+      color: #00796b;
+      font-size: 1.8rem;
+      transition: all 0.3s;
+      box-shadow: 0 10px 15px -5px rgba(0,0,0,0.1);
+      animation: softPulse 2.5s infinite;
     }
-    #map{
-      width: 100px;
-      border-radius: 40px;
-      item-center: right;
+
+    .social-links a:hover {
+      background: #00796b;
+      color: white;
+      transform: translateY(-5px) scale(1.05);
+      animation: none;
+    }
+
+    .social-links a i {
+      font-size: 1.8rem;
+    }
+
+    /* map */
+    .map-container {
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+      margin: 2rem 0;
+      transition: 0.3s;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    /* footer */
+    footer {
+      background: #002b26;
+      color: #c8e6e0;
       text-align: center;
-      
+      padding: 2rem 1.5rem;
+      border-top-left-radius: 3rem;
+      border-top-right-radius: 3rem;
+      margin-top: 3rem;
+      font-size: 0.95rem;
     }
-    .fab{
-      width: 35px;
-      border-radius: 17px;
+
+    footer i {
+      color: #80cbc4;
+      margin: 0 4px;
+    }
+
+    /* gallery page specifics */
+    .gallery-page .gallery-headline {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      margin: 2rem 0 1rem;
+      background: linear-gradient(135deg, #004d40, #00796b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.03em;
+      animation: fadeUp 0.8s ease;
+    }
+
+    .gallery-grid-8 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+
+    .gallery-grid-8 .gallery-item {
+      aspect-ratio: 1/1;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 12px 25px -8px rgba(0,0,0,0.15);
+      transition: all 0.3s;
+    }
+
+    .gallery-grid-8 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .gallery-grid-8 .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .video-wrapper {
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.25);
+      background: #000;
+      aspect-ratio: 16/9;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* mobile */
+    @media (max-width: 900px) {
+      .gallery-grid-8 { grid-template-columns: repeat(2, 1fr); }
+      .video-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+      }
+      .logo-area {
+        flex-direction: column;
+      }
+      .header-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+      }
+      nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+      .slider {
+        height: 280px;
+      }
+      .slides img {
+        height: 280px;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .about-text {
+        padding: 1.5rem;
+      }
+      .contact-form {
+        padding: 1.5rem;
+      }
+      .gallery-headline {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid-8 { grid-template-columns: 1fr; }
+    }
+
+    /* gallery page navigation active style */
+    .active-page {
+      background: #00796b !important;
+      color: white !important;
+      border-color: #00796b !important;
+    }
+    .active-page i {
+      color: white !important;
+    }
+
+    /* make map link look modern */
+    .map-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #00796b;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 1rem auto;
+      box-shadow: 0 12px 20px -8px #00796b;
+      transition: 0.3s;
+    }
+
+    .map-link-btn:hover {
+      background: #004d40;
+      transform: scale(1.02);
     }
   </style>
 </head>
 <body>
+
+  <!-- ========== HEADER ========== -->
   <header>
-    <img class="logo" src="images/logoA.jpg" alt="Arcon Guest House Logo">
-    <h1>Arcon Guest House</h1>
-    <p>Vanderbijlpark, Phone: +27-73 284 9145, Vaal Area</p>
+    <div class="logo-area">
+      <img src="images/logoA.jpg" alt="Arcon Guest House Logo" onerror="this.src='https://placehold.co/120x60/004d40/white?text=Arcon'">
+      <h1>Arcon Guest House</h1>
+    </div>
+    <div class="header-info">
+      <span><i class="fas fa-map-pin"></i> Vanderbijlpark, Vaal</span>
+      <span><i class="fas fa-phone-alt"></i> +27 73 284 9145</span>
+    </div>
   </header>
 
+  <!-- ========== NAVIGATION ========== -->
   <nav>
-    <a href="#about">About Us</a>
-    <a href="details.html">Prices</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact">Book Now</a>
+    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+    <a href="details.html"><i class="fas fa-tag"></i> Prices</a>
+    <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="#contact"><i class="fas fa-calendar-check"></i> Book Now</a>
   </nav>
 
+  <!-- ========== SLIDER ========== -->
   <div class="slider">
     <div class="slides">
-      <img src="images/ima.jpg" alt="Room 1">
-      <img src="images/imo.jpg" alt="Room 2">
-      <img src="images/ala.jpg" alt="Room 3">
-      <img src="images/olo.jpg" alt="Room 4">
+      <img src="images/ima.jpg" alt="Room 1" onerror="this.src='https://placehold.co/1200x420/00796b/white?text=Room+1'">
+      <img src="images/imo.jpg" alt="Room 2" onerror="this.src='https://placehold.co/1200x420/004d40/white?text=Room+2'">
+      <img src="images/ala.jpg" alt="Room 3" onerror="this.src='https://placehold.co/1200x420/00796b/white?text=Room+3'">
+      <img src="images/olo.jpg" alt="Room 4" onerror="this.src='https://placehold.co/1200x420/004d40/white?text=Room+4'">
     </div>
   </div>
 
-  <section id="about" class="content">
-    <h2>About Us</h2>
-    <p>Arcon Guest House is located in Vanderbijlpark, next to the Vaal Institute in the heart of the Vaal area. We offer beautiful and affordable overnight accommodation and restful day stays for travelers, professionals, and families.</p>
-    <p>Our rooms range from Double Rooms with shared bathrooms to En-suite Double Rooms, as well as Single Rooms with double beds. Day rest options are also available starting from just R150 for 3 hours.</p>
-    <p>We are a <strong>self-catering guest house</strong> with everything you need for a comfortable stay. Enjoy our <strong>beautifully equipped kitchen</strong> with modern appliances, perfect for preparing your own meals at your convenience.</p>
-  </section>
+  <!-- ========== MAIN CONTENT ========== -->
+  <div class="container">
 
-  <section id="gallery" class="grid">
-    <a href="images/imae.jpg"><img src="images/imae.jpg" alt="Room A"></a>
-    <a href="images/imo.jpg"><img src="images/imo.jpg" alt="Room B"></a>
-    <a href="images/ima.jpg"><img src="images/ima.jpg" alt="Room C"></a>
-    <a href="images/ime.jpg"><img src="images/ime.jpg" alt="Kitchen"></a>
-  </section><br>
-  <section id="gallery" class="grid">
-    <a href="images/ala.jpg"><img src="images/ala.jpg" alt="Room A"></a>
-    <a href="images/ele.jpg"><img src="images/ele.jpg" alt="Room B"></a>
-    <a href="images/ili.jpg"><img src="images/ili.jpg" alt="Room C"></a>
-    <a href="images/olo.jpg"><img src="images/olo.jpg" alt="Kitchen"></a>
-  </section>
+    <!-- About section -->
+    <section id="about">
+      <h2 class="section-title"><i class="fas fa-home"></i> About Us</h2>
+      <div class="about-text">
+        <p><strong>Arcon Guest House</strong> is located in Vanderbijlpark, next to the Vaal Institute in the heart of the Vaal area. We offer beautiful and affordable overnight accommodation and restful day stays for travelers, professionals, and families.</p>
+        <p>Our rooms range from Double Rooms with shared bathrooms to En-suite Double Rooms, as well as Single Rooms with double beds. Day rest options are also available starting from just R150 for 3 hours.</p>
+        <p>We are a <strong>self-catering guest house</strong> with everything you need for a comfortable stay. Enjoy our <strong>beautifully equipped kitchen</strong> with modern appliances, perfect for preparing your own meals at your convenience.</p>
+      </div>
+    </section>
 
-  <section id="contact" class="content">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form action="https://formsubmit.co/bothwell.gurure11@gmail.com" method="POST">
-     <div class="social-links">
-      <a href="https://wa.me/27732849145" target="_blank" title="WhatsApp"><img class="fab" src="images/whats.jpeg"></a>
-      <a href="https://www.facebook.com/profile.php?id=61560778964900" target="_blank" title="Facebook"><img class="fab" src="images/facebook.jpg"></a>
-      <a href="https://instagram.com/" target="_blank" title="Instagram"><img class="fab" src="images/instagram.jpg"></a>
-    </div>
-  </section><br>
-  <hr>
-  <br>
-  <a id="map" href="https://maps.app.goo.gl/r1jv8BfVN7UpgbT27">Map Click Me</a><br>
+    <!-- Gallery preview section -->
+    <section id="gallery">
+      <h2 class="section-title"><i class="fas fa-camera"></i> Gallery preview</h2>
+      <div class="preview-grid">
+        <a href="gallery.html"><img src="images/imae.jpg" alt="Room A" onerror="this.src='https://placehold.co/400x300/00796b/white?text=Room+A'"></a>
+        <a href="gallery.html"><img src="images/imo.jpg" alt="Room B" onerror="this.src='https://placehold.co/400x300/004d40/white?text=Room+B'"></a>
+        <a href="gallery.html"><img src="images/ima.jpg" alt="Room C" onerror="this.src='https://placehold.co/400x300/00796b/white?text=Room+C'"></a>
+        <a href="gallery.html"><img src="images/ime.jpg" alt="Kitchen" onerror="this.src='https://placehold.co/400x300/004d40/white?text=Kitchen'"></a>
+      </div>
+      <div class="preview-grid">
+        <a href="gallery.html"><img src="images/ala.jpg" alt="Room D" onerror="this.src='https://placehold.co/400x300/00796b/white?text=Room+D'"></a>
+        <a href="gallery.html"><img src="images/ele.jpg" alt="Room E" onerror="this.src='https://placehold.co/400x300/004d40/white?text=Room+E'"></a>
+        <a href="gallery.html"><img src="images/ili.jpg" alt="Room F" onerror="this.src='https://placehold.co/400x300/00796b/white?text=Room+F'"></a>
+        <a href="gallery.html"><img src="images/olo.jpg" alt="Kitchen" onerror="this.src='https://placehold.co/400x300/004d40/white?text=Kitchen'"></a>
+      </div>
+      <div style="text-align: center; margin: 1.5rem 0;">
+        <a href="gallery.html" class="map-link-btn" style="background: #004d40;"><i class="fas fa-arrow-right"></i> View full gallery</a>
+      </div>
+    </section>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6335813637851040"
-     crossorigin="anonymous"></script>
-<!-- Arcon Guest House -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6335813637851040"
-     data-ad-slot="6530312344"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <!-- Contact + form + live map -->
+    <section id="contact">
+      <h2 class="section-title"><i class="fas fa-paper-plane"></i> Get in touch</h2>
 
+      <form class="contact-form" action="https://formsubmit.co/bothwell.gurure11@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+
+      <!-- social -->
+      <div class="social-links">
+        <a href="https://wa.me/27732849145" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61560778964900" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <!-- live map -->
+      <div style="margin: 2.5rem 0 1rem;">
+        <h3 style="font-size: 1.5rem; font-weight: 600; display: flex; align-items: center; gap: 10px; color: #00332c;"><i class="fas fa-map-marked-alt" style="color: #00796b;"></i> Find us live</h3>
+      </div>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.6653280753455!2d27.83749331520648!3d-26.68029598339886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e945f0e6c0e4f47%3A0x8f7f3b3e3b3e3b3e!2s37%20Cornwallis%20Harris%20St%2C%20Vanderbijlpark%20S.%20E.%207%2C%20Vanderbijlpark%2C%201911!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div style="text-align: center; margin: 1rem 0 2rem;">
+        <a id="map" href="https://maps.app.goo.gl/r1jv8BfVN7UpgbT27" target="_blank" class="map-link-btn"><i class="fas fa-location-dot"></i> Open in Google Maps</a>
+      </div>
+    </section>
+
+  </div> <!-- container end -->
+
+  <!-- ========== FOOTER ========== -->
   <footer>
-    <p>&copy; 2025 Arcon Guest House. All rights reserved. Address: 37 Cornwallis Harris St, Vanderbijlpark S. E. 7, Vanderbijlpark, 1911 Phone: +27-73 284 9145 </p>
-  </footer><br>
-  <br>
+    <p><i class="fas fa-map-pin"></i> 37 Cornwallis Harris St, Vanderbijlpark S. E. 7, Vanderbijlpark, 1911</p>
+    <p><i class="fas fa-phone-alt"></i> +27 73 284 9145 &nbsp;|&nbsp; <i class="fas fa-envelope"></i> info@arconguesthouse.co.za</p>
+    <p style="margin-top: 1rem; opacity: 0.8;">&copy; 2025 Arcon Guest House. All rights reserved.</p>
+  </footer>
+
+  <!-- Google Ads (kept as in original) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6335813637851040" crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6335813637851040"
+       data-ad-slot="6530312344"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
 </body>
 </html>
